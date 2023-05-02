@@ -2,9 +2,12 @@
 .main-navigation a:focus {
   color: #2196f3;
 }
-
-.global-body {
+body {
   width: 1600px;
+}
+
+header {
+  border: 1px solid #ececec;
 }
 .global-body a {
   text-decoration: none;
@@ -15,6 +18,7 @@
 
 .container {
   margin: 0 auto;
+  width: 1600px;
 }
 .webstudio-nav {
   font-family: "Raleway";
@@ -288,24 +292,28 @@
 .footer-address-li-studio {
   margin-bottom: 28px;
 }
-.port-button {
+.port-buttons {
+  flex-direction: row;
+  justify-content: center;
+  padding: 55px;
+}
+button {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
   line-height: 26px;
-  text-align: center;
-  letter-spacing: 0.03em;
-  color: #ffffff;
   background-color: #f5f4fa;
+  margin-left: 32px;
+  border-radius: 4px;
+  background: #f5f4fa;
+  border: #ffffff;
+  padding: 6px 22px 6px 22px;
 }
-.port-button button:hover {
+button:active {
   background-color: #2196f3;
 }
-.port-button button:focus {
-  background-color: #2196f3;
-}
-.port-button button:active {
+button:hover {
   background-color: #2196f3;
 }
 .port-button-section {
@@ -315,19 +323,10 @@
 .port-buttons {
   display: flex;
 }
-.port-buttons {
-  flex-direction: row;
-  justify-content: center;
-  padding: 55px;
+.port-buttons li + li {
+  margin-left: 8px;
 }
-.port-button {
-  margin-left: 32px;
-  border-radius: 4px;
-  background: #f5f4fa;
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-    0px 2px 2px rgba(0, 0, 0, 0.12);
-  border-radius: 4px;
-}
+
 .port-main h4 {
   font-family: "Roboto";
   font-style: normal;
