@@ -2,13 +2,11 @@
 .main-navigation a:focus {
   color: #2196f3;
 }
-body {
-  width: 1600px;
-}
 
 header {
   border: 1px solid #ececec;
 }
+
 .global-body a {
   text-decoration: none;
 }
@@ -18,7 +16,7 @@ header {
 
 .container {
   margin: 0 auto;
-  width: 1600px;
+  max-width: 1200px;
 }
 .webstudio-nav {
   font-family: "Raleway";
@@ -92,10 +90,10 @@ header {
 .button-main {
   display: flex;
   justify-content: center;
+  padding-bottom: 200px;
+  padding-top: 30px;
 }
-.top-main-button {
-  padding: 10px 20px 10px 20px;
-}
+
 .top-main-title {
   font-family: "Roboto";
   font-style: normal;
@@ -117,6 +115,7 @@ header {
   line-height: 30px;
   letter-spacing: 0.06em;
   color: #ffffff;
+  padding: 10px 20px 10px 20px;
 }
 
 .group-main {
@@ -296,6 +295,7 @@ header {
   flex-direction: row;
   justify-content: center;
   padding: 55px;
+  cursor: pointer;
 }
 button {
   font-family: "Roboto";
@@ -355,5 +355,13 @@ button:hover {
   flex-wrap: wrap;
 }
 .port-card {
-  margin-left: 30px;
+  margin: 30px 30px 30px 30px;
+  border: 1px solid #eeeeee;
+}
+.port-card h4 {
+  padding: 20px 24px 4px 24px;
+}
+.port-card p {
+  margin-top: 4px;
+  padding: 4px 24px;
 }
