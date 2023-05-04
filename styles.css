@@ -2,9 +2,7 @@
 .main-navigation a:focus {
   color: #2196f3;
 }
-body {
-  width: 1200px;
-}
+
 header {
   border: 1px solid #ececec;
 }
@@ -18,7 +16,7 @@ header {
 
 .container {
   margin: 0 auto;
-  max-width: 1200px;
+  width: 1200px;
 }
 .webstudio-nav {
   font-family: "Raleway";
