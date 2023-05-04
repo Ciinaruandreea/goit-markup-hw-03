@@ -90,8 +90,6 @@ header {
 .button-main {
   display: flex;
   justify-content: center;
-  padding-bottom: 200px;
-  padding-top: 30px;
 }
 
 .top-main-title {
