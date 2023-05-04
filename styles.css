@@ -91,7 +91,9 @@ header {
   display: flex;
   justify-content: center;
 }
-
+.top-main-title {
+  padding: 200px 300px;
+}
 .top-main-title {
   font-family: "Roboto";
   font-style: normal;
@@ -102,7 +104,9 @@ header {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: #ffffff;
-  padding: 200px 300px;
+}
+.top-main-button {
+  padding: 10px 20px 10px 20px;
 }
 .top-main-button {
   background-color: #2196f3;
@@ -113,7 +117,6 @@ header {
   line-height: 30px;
   letter-spacing: 0.06em;
   color: #ffffff;
-  padding: 10px 20px 10px 20px;
 }
 
 .group-main {
