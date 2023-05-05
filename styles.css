@@ -3,17 +3,28 @@
   color: #2196f3;
 }
 
-header {
-  border: 1px solid #ececec;
+.global-header {
+  border-bottom: 1px solid #ececec;
 }
-
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
 .global-body a {
   text-decoration: none;
 }
 .global-body li {
   list-style-type: none;
 }
-
+.main-nav-ul {
+  display: flex;
+}
+.header-div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 .container {
   margin: 0 auto;
   width: 1200px;
@@ -33,12 +44,8 @@ header {
 .studio-nav {
   color: #000000;
 }
-
 .main-navigation {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px;
 }
 .main-navigation .main-logo {
   padding: 24px 93px 25px 215px;
@@ -75,25 +82,26 @@ header {
   color: #212121;
 }
 .header-contacts {
-  padding: 32px;
-  justify-content: space-between;
-}
-.header-contacts ul {
-  margin-left: 40px;
   display: flex;
 }
+.header-contacts-ul {
+  display: flex;
+  margin-left: 215px;
+}
+
 .top-main {
   background-color: #2f303a;
-
-  display: flex;
+  padding: 200px 0px;
 }
+.top-main-container {
+  text-align: center;
+}
+
 .button-main {
   display: flex;
   justify-content: center;
 }
-.top-main-title {
-  padding: 200px 300px;
-}
+
 .top-main-title {
   font-family: "Roboto";
   font-style: normal;
@@ -104,34 +112,43 @@ header {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: #ffffff;
+  margin-bottom: 30px;
 }
-.top-main-button {
-  padding: 10px 20px 10px 20px;
-}
+
 .top-main-button {
   background-color: #2196f3;
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
   line-height: 30px;
   letter-spacing: 0.06em;
   color: #ffffff;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
 }
 
 .group-main {
-  display: flex;
   padding: 94px;
-  align-items: flex-start;
 }
 .group-main-position {
   display: flex;
+  justify-content: center;
 }
 .group-main-position > div {
   flex: 0 1 50%;
   margin-left: 30px;
 }
-.group-main h4 {
+
+.group-main-container:not(:last-child) {
+  margin-right: 30px;
+}
+.group-main-container {
+  flex: basis 270px;
+}
+.group-main-title {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 700;
@@ -139,10 +156,9 @@ header {
   line-height: 16px;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-
   color: #212121;
 }
-.group-main p {
+.group-main-text {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
@@ -152,7 +168,14 @@ header {
   color: #757575;
 }
 
-.work-section .work-title {
+.work-section {
+  padding-top: 0px;
+}
+.section {
+  padding: 94px 0px;
+}
+
+.work-title {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 700;
@@ -161,55 +184,55 @@ header {
   text-align: center;
   letter-spacing: 0.03em;
   color: #212121;
+  margin-bottom: 50px;
 }
-
-.work-section .work-images-position {
+.work-images-position {
   display: flex;
-  padding: 50px;
 }
-.work-section .work-images-position img {
-  margin-left: 30px;
-  padding: 50px;
+.work:not(:last-child) {
+  margin-right: 30px;
 }
 
 .section-our-team {
-  display: flex;
   background-color: #f5f4fa;
+}
+.title-our-team {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 42px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #212121;
+  margin-bottom: 50px;
 }
 .cards-team {
   display: flex;
 }
-
-.section-our-team .cards-team .card-team h4 p {
-  display: flex;
-  flex-direction: row;
-  padding: 50px;
+.card-team:not(:last-child) {
+  margin-right: 30px;
 }
+
 .card-team {
-  margin-left: 30px;
-  margin-bottom: 94px;
-}
-
-.section-our-team .card-team {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  padding-bottom: 30px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
-.section-our-team .title-our-team {
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 42px;
-  text-align: center;
-  letter-spacing: 0.03em;
-  color: #212121;
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
-.section-our-team .title-our-team {
-  padding: 94px;
+.card-team-img {
+  margin-bottom: 30px;
 }
 
-.section-our-team h4 {
+.card-team-name {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
@@ -218,8 +241,9 @@ header {
   text-align: center;
   letter-spacing: 0.03em;
   color: #212121;
+  margin-bottom: 10px;
 }
-.section-our-team p {
+.card-team-text {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
@@ -228,9 +252,12 @@ header {
   text-align: center;
   letter-spacing: 0.03em;
   color: #757575;
+  margin-bottom: 16px;
 }
+
 .footer-page {
   background: #2f303a;
+  padding: 60px 0px;
 }
 
 .webstudio-footer {
@@ -241,6 +268,7 @@ header {
   line-height: 31px;
   letter-spacing: 0.03em;
   color: #2196f3;
+  margin-bottom: 10px;
 }
 .web-footer {
   color: #2196f3;
@@ -284,39 +312,47 @@ header {
 .footer-address {
   display: flex;
   flex-direction: column;
-  padding: 60px 1150px 60px 215px;
 }
 .footer-address-li {
   margin-top: 12px;
+}
+.footer-address-li-studio:not(:last-child) {
+  margin-right: 70px;
 }
 .footer-address-li-studio {
   margin-bottom: 28px;
 }
 .port-buttons {
-  flex-direction: row;
+  display: flex;
+  margin-bottom: 50px;
   justify-content: center;
-  padding: 55px;
-  cursor: pointer;
 }
-button {
+.port-buttons-li:not(:last-child) {
+  margin-right: 8px;
+}
+.current-button,
+.button:hover,
+.button:focus {
+  background-color: #2196f3;
+
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+.button {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
   line-height: 26px;
   background-color: #f5f4fa;
-  margin-left: 32px;
+  text-align: center;
   border-radius: 4px;
   background: #f5f4fa;
-  border: #ffffff;
+  border: none;
   padding: 6px 22px 6px 22px;
+  margin-left: 8px;
 }
-button:active {
-  background-color: #2196f3;
-}
-button:hover {
-  background-color: #2196f3;
-}
+
 .port-button-section {
   display: flex;
 }
@@ -328,7 +364,25 @@ button:hover {
   margin-left: 8px;
 }
 
-.port-main h4 {
+.port-cards {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: -30px;
+  margin-left: -30px;
+}
+
+.port-card {
+  margin-top: 30px;
+  margin-left: 30px;
+}
+.port-card-a {
+  display: block;
+}
+.port-container {
+  padding: 20px 24px;
+  border: 1px solid #eeeeee;
+}
+.port-title {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 700;
@@ -336,8 +390,9 @@ button:hover {
   line-height: 36px;
   letter-spacing: 0.06em;
   color: #212121;
+  margin-bottom: 4px;
 }
-.port-main p {
+.port-text {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
@@ -345,24 +400,4 @@ button:hover {
   line-height: 30px;
   letter-spacing: 0.03em;
   color: #757575;
-}
-
-.port-cards {
-  display: flex;
-}
-.port-cards {
-  justify-content: center;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-.port-card {
-  margin: 30px 30px 30px 30px;
-  border: 1px solid #eeeeee;
-}
-.port-card h4 {
-  padding: 20px 24px 4px 24px;
-}
-.port-card p {
-  margin-top: 4px;
-  padding: 4px 24px;
 }
